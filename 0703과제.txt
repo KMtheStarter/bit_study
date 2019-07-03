@@ -1,0 +1,7 @@
+//TextField값을 읽어와서 jTextArea에 출력
+String inputVal = inputv.getText().trim();
+resv.append(inputVal+"\n");
+inputv.setText("");
+inputv.requestFocue(); //커서 만들기
+
+경로를 입력하면 -> 검색한 경로의 하위디렉토리와 파일 나오게
