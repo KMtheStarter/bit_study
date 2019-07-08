@@ -79,4 +79,19 @@ public class SawonImple implements SawonInter {
         return list;
     }
 
+    @Override
+    public void addSawon(SawonDTO dto) {
+        Connection con = null;
+        PreparedStatement pstm = null;
+        // insert into sawon values(sawon_seq.nextVal, '박점심', 20, '과장', 5000, sysdate, '남자', 10);
+        String sql = "insert into sawon values(sawon_seq.nextVal, ?, ?, ?, ?, sysdate, ?, ?)";
+        pstm = con.prepareStatement(sql);
+        pstm.setString(1, "%" + searchValue + "%");
+        pstm.setString(2, "%" + searchValue + "%");
+        pstm.setString(3, "%" + searchValue + "%");
+        pstm.setString(4, "%" + searchValue + "%");
+        pstm.setString(5, "%" + searchValue + "%");
+        pstm.setString(6, "%" + searchValue + "%");
+    }
+
 }
